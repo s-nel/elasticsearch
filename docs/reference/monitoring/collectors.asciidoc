@@ -72,7 +72,7 @@ node to be able to perform the collection, the master node must have
 usage (for example, `GET /_nodes/_local/stats`). This runs on _every_ node with
 {monitoring} enabled. One common failure results in the timeout of the node
 stats request due to too many segment files. As a result, the collector spends
-too much time waiting for the file system stats to be calculated until it
+too much time waiting for the filesystem stats to be calculated until it
 finally times out. A single `node_stats` document is created per collection.
 This is collected per node to help to discover issues with nodes communicating
 with each other, but not with the monitoring cluster (for example, intermittent

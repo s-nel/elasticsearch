@@ -1,7 +1,7 @@
 [[setup-configuration-memory]]
 === Disable swapping
 
-Most operating systems try to use as much memory as possible for file system
+Most operating systems try to use as much memory as possible for filesystem
 caches and eagerly swap out unused application memory. This can result in parts
 of the JVM heap or even its executable pages being swapped out to disk.
 

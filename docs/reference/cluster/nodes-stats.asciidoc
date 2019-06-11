@@ -29,7 +29,7 @@ of `indices`, `os`, `process`, `jvm`, `transport`, `http`,
   deletion times, search times, field cache size, merges and flushes
 
 `fs`::
-  File system information, data path, free disk space, read/write
+  Filesystem information, data path, free disk space, read/write
   stats (see <<fs-info,FS information>>)
 
 `http`::
@@ -88,7 +88,7 @@ All stats can be explicitly requested via `/_nodes/stats/_all` or `/_nodes/stats
 ==== FS information
 
 The `fs` flag can be set to retrieve
-information that concern the file system:
+information that concern the filesystem:
 
 `fs.timestamp`::
   Last time the file stores statistics have been refreshed

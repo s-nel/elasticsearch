@@ -236,7 +236,7 @@ locations for an RPM-based system:
   |
 
 | repo
-  | Shared file system repository locations. Can hold multiple locations. A file system repository can be placed in to any subdirectory of any directory specified here.
+  | Shared filesystem repository locations. Can hold multiple locations. A filesystem repository can be placed in to any subdirectory of any directory specified here.
  d| Not configured
   | path.repo
 

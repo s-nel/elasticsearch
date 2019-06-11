@@ -12,8 +12,8 @@
 [float]
 ==== Deprecated node level compress setting removed
 
-For shared file system repositories (`"type": "fs"`), the node level setting `repositories.fs.compress` could
-previously be used to enable compression for all shared file system repositories where `compress` was not specified.
+For shared filesystem repositories (`"type": "fs"`), the node level setting `repositories.fs.compress` could
+previously be used to enable compression for all shared filesystem repositories where `compress` was not specified.
 The `repositories.fs.compress` setting has been removed.
 
 Instead use the repository specific `compress` setting to enable compression. See <<modules-snapshots>> for information

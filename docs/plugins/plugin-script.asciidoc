@@ -55,7 +55,7 @@ This command will install the version of the plugin that matches your
 Elasticsearch version and also show a progress bar while downloading.
 
 [[plugin-management-custom-url]]
-=== Custom URL or file system
+=== Custom URL or filesystem
 
 A plugin can also be downloaded directly from a custom location by specifying the URL:
 
@@ -67,7 +67,7 @@ sudo bin/elasticsearch-plugin install [url] <1>
 
 --
 Unix::
-To install a plugin from your local file system at `/path/to/plugin.zip`, you could run:
+To install a plugin from your local filesystem at `/path/to/plugin.zip`, you could run:
 +
 [source,shell]
 -----------------------------------
@@ -75,7 +75,7 @@ sudo bin/elasticsearch-plugin install file:///path/to/plugin.zip
 -----------------------------------
 
 Windows::
-To install a plugin from your local file system at `C:\path\to\plugin.zip`, you could run:
+To install a plugin from your local filesystem at `C:\path\to\plugin.zip`, you could run:
 +
 [source,shell]
 -----------------------------------

@@ -5,9 +5,9 @@ The store module allows you to control how index data is stored and accessed on 
 
 [float]
 [[file-system]]
-=== File system storage types
+=== Filesystem storage types
 
-There are different file system implementations or _storage types_. By default,
+There are different filesystem implementations or _storage types_. By default,
 Elasticsearch will pick the best implementation based on the operating
 environment.
 
@@ -39,13 +39,13 @@ The following sections lists all the different storage types supported.
 
 `fs`::
 
-Default file system implementation. This will pick the best implementation
+Default filesystem implementation. This will pick the best implementation
 depending on the operating environment, which is currently `hybridfs` on all
 supported systems but is subject to change.
 
 [[simplefs]]`simplefs`::
 
-The Simple FS type is a straightforward implementation of file system
+The Simple FS type is a straightforward implementation of filesystem
 storage (maps to Lucene `SimpleFsDirectory`) using a random access file.
 This implementation has poor concurrent performance (multiple threads
 will bottleneck). It is usually better to use the `niofs` when you need
@@ -53,14 +53,14 @@ index persistence.
 
 [[niofs]]`niofs`::
 
-The NIO FS type stores the shard index on the file system (maps to
+The NIO FS type stores the shard index on the filesystem (maps to
 Lucene `NIOFSDirectory`) using NIO. It allows multiple threads to read
 from the same file concurrently. It is not recommended on Windows
 because of a bug in the SUN Java implementation.
 
 [[mmapfs]]`mmapfs`::
 
-The MMap FS type stores the shard index on the file system (maps to
+The MMap FS type stores the shard index on the filesystem (maps to
 Lucene `MMapDirectory`) by mapping a file into memory (mmap). Memory
 mapping uses up a portion of the virtual memory address space in your
 process equal to the size of the file being mapped. Before using this
@@ -70,7 +70,7 @@ class, be sure you have allowed plenty of
 [[hybridfs]]`hybridfs`::
 
 The `hybridfs` type is a hybrid of `niofs` and `mmapfs`, which chooses the best
-file system type for each type of file based on the read access pattern.
+filesystem type for each type of file based on the read access pattern.
 Currently only the Lucene term dictionary, norms and doc values files are
 memory mapped. All other files are opened using Lucene `NIOFSDirectory`.
 Similarly to `mmapfs` be sure you have allowed plenty of
@@ -84,18 +84,18 @@ setting is useful, for example, if you are in an environment where you can not
 control the ability to create a lot of memory maps so you need disable the
 ability to use memory-mapping.
 
-=== Pre-loading data into the file system cache
+=== Pre-loading data into the filesystem cache
 
 NOTE: This is an expert setting, the details of which may change in the future.
 
-By default, Elasticsearch completely relies on the operating system file system
+By default, Elasticsearch completely relies on the operating system filesystem
 cache for caching I/O operations. It is possible to set `index.store.preload`
 in order to tell the operating system to load the content of hot index
 files into memory upon opening. This setting accept a comma-separated list of
 files extensions: all files whose extension is in the list will be pre-loaded
 upon opening. This can be useful to improve search performance of an index,
 especially when the host operating system is restarted, since this causes the
-file system cache to be trashed. However note that this may slow down the
+filesystem cache to be trashed. However note that this may slow down the
 opening of indices, as they will only become available after data have been
 loaded into physical memory.
 

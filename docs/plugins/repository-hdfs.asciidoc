@@ -1,7 +1,7 @@
 [[repository-hdfs]]
 === Hadoop HDFS Repository Plugin
 
-The HDFS repository plugin adds support for using HDFS File System as a repository for
+The HDFS repository plugin adds support for using HDFS Filesystem as a repository for
 {ref}/modules-snapshots.html[Snapshot/Restore].
 
 :plugin_name: repository-hdfs

@@ -9,7 +9,7 @@ include::install_remove.asciidoc[]
 [[store-smb-usage]]
 ==== Working around a bug in Windows SMB and Java on windows
 
-When using a shared file system based on the SMB protocol (like Azure File Service) to store indices, the way Lucene
+When using a shared filesystem based on the SMB protocol (like Azure File Service) to store indices, the way Lucene
 open index segment files is with a write only flag. This is the _correct_ way to open the files, as they will only be
 used for writes and allows different FS implementations to optimize for it. Sadly, in windows with SMB, this disables
 the cache manager, causing writes to be slow. This has been described in

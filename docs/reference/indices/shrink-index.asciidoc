@@ -16,9 +16,9 @@ Shrinking works as follows:
   index, but with a smaller number of primary shards.
 
 * Then it hard-links segments from the source index into the target index. (If
-  the file system doesn't support hard-linking, then all segments are copied
-  into the new index, which is a much more time consuming process. Also if using 
-  multiple data paths, shards on different data paths require a full copy of 
+  the filesystem doesn't support hard-linking, then all segments are copied
+  into the new index, which is a much more time consuming process. Also if using
+  multiple data paths, shards on different data paths require a full copy of
   segment files if they are not on the same disk since hardlinks don’t work across
   disks)
 

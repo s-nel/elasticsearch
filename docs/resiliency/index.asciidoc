@@ -604,7 +604,7 @@ The backup process is incremental, making it very efficient since only files cha
 
 Since that first release in version 1.0, the API has continued to evolve. In version 1.1.0, we added a new snapshot status API that allows users to monitor the snapshot process. In 1.3.0 we added the ability to {GIT}6457[restore indices without their aliases] and in 1.4 we are planning to add the ability to {GIT}6368[restore partial snapshots].
 
-The Snapshot/Restore API supports a number of different repository types for storing backups. Currently, it’s possible to make backups to a shared file system, Amazon S3, HDFS, and Azure storage. We are continuing to work on adding other types of storage systems, as well as improving the robustness of the snapshot/restore process.
+The Snapshot/Restore API supports a number of different repository types for storing backups. Currently, it’s possible to make backups to a shared filesystem, Amazon S3, HDFS, and Azure storage. We are continuing to work on adding other types of storage systems, as well as improving the robustness of the snapshot/restore process.
 
 [float]
 === Circuit Breaker: Fielddata (STATUS: DONE, v1.0.0)

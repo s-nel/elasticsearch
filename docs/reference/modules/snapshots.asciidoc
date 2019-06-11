@@ -146,10 +146,10 @@ GET /_snapshot/_all
 // CONSOLE
 
 [float]
-===== Shared File System Repository
+===== Shared Filesystem Repository
 
-The shared file system repository (`"type": "fs"`) uses the shared file system to store snapshots. In order to register
-the shared file system repository it is necessary to mount the same shared filesystem to the same location on all
+The shared filesystem repository (`"type": "fs"`) uses the shared filesystem to store snapshots. In order to register
+the shared filesystem repository it is necessary to mount the same shared filesystem to the same location on all
 master and data nodes. This location (or one of its parent directories) must be registered in the `path.repo`
 setting on all master and data nodes.
 
@@ -169,7 +169,7 @@ a prefix and back slashes are properly escaped:
 path.repo: ["\\\\MY_SERVER\\Snapshots"]
 --------------
 
-After all nodes are restarted, the following command can be used to register the shared file system repository with
+After all nodes are restarted, the following command can be used to register the shared filesystem repository with
 the name `my_fs_backup`:
 
 [source,js]
@@ -234,7 +234,7 @@ repositories.url.allowed_urls: ["http://www.example.org/root/*", "https://*.mydo
 -----------------------------------
 
 URL repositories with `file:` URLs can only point to locations registered in the `path.repo` setting similar to
-shared file system repository.
+shared filesystem repository.
 
 [float]
 [role="xpack"]
